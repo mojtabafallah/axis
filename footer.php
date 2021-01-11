@@ -1,4 +1,11 @@
 <?php use app\controllers\Assets; ?>
+<?php
+$time = ot_get_option('time', false);
+$address = ot_get_option('address', false);
+$tell_footer = ot_get_option('tell_footer', false);
+$social = ot_get_option('social', array());
+
+?>
 <footer>
     <div class="footer_Custom">
         <div class="container main-container">
@@ -26,9 +33,9 @@
 
                 <div class="work_time">
                     <span>ساعت کاری :</span>
-                    <span>شنبه تا  چهارشنبه ۹ الی ۱۸</span>
-                    <span><span class="location_custom"></span>تهران , کارگر خیابانی شمال</span>
-                    <span><span class="phone_footer_custom"> </span><span class="end_custom">    ۳۳۳</span> <span class="first_custom">۰۲۱</span> </span>
+                    <span><?php echo $time?></span>
+                    <span><span class="location_custom"></span><?php echo $address?></span>
+                    <span><span class="phone_footer_custom"> </span><span class="end_custom"><?php echo $tell_footer?></span> <span class="first_custom">۰۲۱</span> </span>
                     <span><span class="web_custom"></span>www.AxisGold.com</span>
 
                 </div>
@@ -45,11 +52,13 @@
                 </div>
                 <div class="social_media_section">
                     <ul>
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                        <li><a href="#"><span class="fa fa-telegram"></span></a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="aparat"><img src="<?php echo Assets::image('aparat.png')?>" alt=""></span></a></li>
+                        <?php foreach ($social as $s):?>
+                        <li><a href="<?php echo $s['link']?>"><span class="<?php echo $s['icon']?>"></span></a></li>
+                        <?php endforeach;?>
+<!--                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>-->
+<!--                        <li><a href="#"><span class="fa fa-telegram"></span></a></li>-->
+<!--                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>-->
+<!--                        <li><a href="#"><span class="aparat"><img src="--><?php //echo Assets::image('aparat.png')?><!--" alt=""></span></a></li>-->
                     </ul>
                 </div>
             </div>
