@@ -6,33 +6,24 @@
 
 
             <div class="col-12 col-sm-4 col-lg-3">
-                <ul>
-                    <li><a href="#">منوی اصلی </a></li>
-                    <li><a href="#">پراید </a></li>
-                    <li><a href="#">تیبا </a></li>
-                    <li><a href="#">پژو 206 (رانا) </a></li>
-                    <li><a href="#">سمند</a></li>
-                    <li><a href="#">ال 90 </a></li>
-                    <li><a href="#">نیسان</a></li>
-                </ul>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'footer_menu',
+                    'container_class' => 'custom-menu-class' ) );
+                ?>
 
             </div>
             <div class="col-12 col-sm-4 col-lg-3">
                 <ul>
-                    <li><a href="#">ریو </a></li>
-                    <li><a href="#">پژو 405 </a></li>
-                    <li><a href="#">تیبا </a></li>
-                    <li><a href="#">لوازم جانبی  </a></li>
-                    <li><a href="#">سمند</a></li>
-                    <li><a href="#">منوی فرعی </a></li>
+                    <?php $posts_query = new WP_Query('posts_per_page=5');
+                    while ($posts_query->have_posts()) : $posts_query->the_post();
+                        ?>
+                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                    <?php endwhile; wp_reset_query(); ?>
                 </ul>
             </div>
             <div class="col-12 col-sm-4 col-lg-3">
-                <div class="article">
-                    <ul>
-                        <li><a href="#">مقالات</a></li>
-                    </ul>
-                </div>
+
                 <div class="work_time">
                     <span>ساعت کاری :</span>
                     <span>شنبه تا  چهارشنبه ۹ الی ۱۸</span>

@@ -14,6 +14,13 @@ function wpb_custom_new_menu() {
 }
 
 add_action( 'init', 'wpb_custom_new_menu' );
+
+function wpb_custom_footer() {
+    register_nav_menu('footer_menu',__( 'پایین در سر پا صفحه' ));
+}
+
+add_action( 'init', 'wpb_custom_footer' );
+
 add_theme_support( 'post-thumbnails' );
 
 
