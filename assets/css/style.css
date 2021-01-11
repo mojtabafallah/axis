@@ -1,0 +1,1105 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.svg');
+    src: url('../fonts/fontawesome-webfont.woff');
+    src: url('../fonts/fontawesome-webfont.woff2');
+    src: url('../fonts/FontAwesome.otf');
+}
+
+@font-face {
+    font-family: 'iranans';
+    src: url('../fonts/IRANSansWeb\(FaNum\).eot');
+    src: url('../fonts/IRANSansWeb\(FaNum\).ttf');
+    src: url('../fonts/IRANSansWeb\(FaNum\).woff');
+    src: url('../fonts/IRANSansWeb\(FaNum\).woff2');
+}
+
+@font-face {
+    font-family: 'iranans_light';
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Light.eot');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Light.ttf');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Light.woff');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Light.woff2');
+}
+
+@font-face {
+    font-family: 'iranans_medium';
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Medium.eot');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Medium.ttf');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Medium.woff');
+    src: url('../fonts/IRANSansWeb\(FaNum\)_Medium.woff2');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: iranans;
+    direction: rtl;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    float: right;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+.main-container {
+    max-width: 1720px;
+}
+
+.header_search_custom {
+    display: flex;
+    align-items: center;
+}
+
+.header_custom {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 5px solid #d1ae2b;
+    padding-bottom: 8px;
+}
+
+.phone_number {
+    width: 21.97674418604651%;
+    float: right;
+    position: relative;
+    flex-direction: row-reverse;
+    align-items: center;
+    display: flex;
+}
+
+.phone_number .first_of_the_number {
+    font-size: 43px;
+    color: #d0ac2c;
+    margin-right: 10px;
+}
+
+.phone_number .end_of_the_number {
+    font-size: 64px;
+    color: #231f53;
+    font-family: iranans_medium;
+}
+
+.phone_header_custom {
+    font-size: 73px;
+    color: #d4b133;
+    margin-right: 10px;
+}
+
+.header_search_form {
+    width: 100%;
+    float: right;
+    margin-right: 20px;
+    width: 61.16279069767442%;
+}
+
+.header_search_form form {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.header_search_form input {
+    width: 100%;
+    float: right;
+    padding: 15px 0;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #E6E6E6;
+    box-shadow: inset 0px 1px 8px rgba(210, 202, 202, 0.59);
+    padding-right: 76px;
+    font-size: 22px;
+}
+
+.header_seach_form_button {
+    color: #90908f;
+    right: 47px;
+    position: absolute;
+    top: 1px;
+    right: 23px;
+    font-size: 44px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.header_logo {
+    width: 15%;
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_section {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.first_menu {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.first_menu {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+
+.first_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    padding-right: 42px;
+    position: relative;
+}
+
+.first_menu ul li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.first_menu ul li a {
+    display: block;
+    color: #4b4949;
+    font-size: 22px;
+    position: relative;
+    font-family: 'iranans_medium';
+}
+
+.first_menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #c8c6c5;
+    border-radius: 50px;
+    left: -32px;
+}
+
+.first_menu ul li ul {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    float: right;
+    right: 70px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 0 0 16px 16px;
+    top: 42px;
+    transform: translateY(-30px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 99999999999999999999999999999999;
+}
+
+.first_menu ul li ul li {
+    width: 16%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.first_menu ul li ul li a::before {
+    display: none;
+}
+
+.first_menu ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.second_menu {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: right;
+    margin-right: 85px;
+}
+
+.second_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.second_menu ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.second_menu ul li a {
+    font-size: 22px;
+    color: #292451;
+    position: relative;
+}
+
+.second_menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #d6b543;
+    left: -25px;
+}
+
+.second_menu ul li:last-child a::before {
+    display: none;
+}
+
+.the_most_selling_section {
+    float: right;
+    width: 100%;
+    text-align: right;
+    margin-top: 58px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.the_most_selling_section h1 {
+    font-size: 30px;
+    color: #201c4a;
+    font-family: 'iranans_medium';
+    text-indent: 10px;
+}
+
+.the_most_selling_section img {
+    float: right;
+}
+
+.selling_picture_custom {
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 20px;
+}
+
+.selling_picture_custom img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.selling_picture_custom_info {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.selling_picture_custom_info .fa-angle-right {
+    width: 61px;
+    height: 61px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 65px;
+    box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.51);
+}
+
+.selling_picture_custom_info .green {
+    color: #4fb962;
+}
+
+.selling_picture_custom_info .selling_picture_custom_info_title {
+    font-size: 21px;
+    color: white;
+    font-family: 'iranans_medium';
+    margin-right: 10px;
+}
+
+.selling_picture_custom_info .purple {
+    color: #b463a7;
+}
+
+.selling_picture_custom_info_2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.orange {
+    color: #ffcb06;
+}
+
+.selling_picture_custom_info .selling_picture_custom_info_title2 {
+    color: #453b21;
+    font-family: 'iranans_medium';
+    margin-left: 10px;
+}
+
+.selling_picture_custom_info_3 {
+    position: absolute;
+}
+
+.selling_picture_custom_info_4 {
+    position: absolute;
+    bottom: 17px;
+    left: 11px;
+    right: auto;
+    flex-direction: row-reverse;
+}
+
+.selling_picture_custom_info_4 .fa-angle-left {
+    width: 61px;
+    height: 61px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 65px;
+    color: #6eccdc;
+    box-shadow: 1px 1px 14px -1px rgba(38, 37, 87, 0.51);
+}
+
+
+}
+.gold_description {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+.gold_description {
+    width: 100%;
+    float: right;
+    position: relative;
+    background-image: url('../img/990911-AxisGOLD-WebSite-_1__02.jpg');
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    margin-top: 56px;
+}
+.welcom_sentence {
+    width: 100%;
+    float: right;
+    text-align: center;
+    color: #504d4d;
+    font-family: 'iranans_medium';
+}
+.welcom_sentence h4 {
+    font-size: 22px;
+}
+.welcom_sentence span {
+    font-size: 30px;
+    color: #262457;
+}
+.gland_proud {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+    color: #504d4d;
+    font-family: 'iranans_medium';
+}
+.gland_proud span {
+    font-size: 30px;
+    color: #262457;
+}
+.gland_proud h4 {
+    font-size: 24px;
+}
+.quality_custom {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+    font-family: 'iranans_medium';
+    padding: 15px 0;
+    margin-top: 28px;
+}
+.quality_custom h4 {
+    font-size: 26px;
+    color: #262457;
+    display: inline-block;
+    position: relative;
+    line-height: 30px;
+}
+.quality_custom h4::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #bf9932;
+    border-radius: 50px;
+    top: -20px;
+    right: 0;
+}
+.quality_custom h4::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #bf9932;
+    border-radius: 50px;
+    bottom: -20px;
+    right: 0;
+}
+.quality_custom span {
+    font-size: 30px;
+}
+.aksis_logo_custom {
+    float: right;
+    width: 100%;
+    margin-bottom: 34px;
+}
+.aksis_logo_custom img {
+    display: block;
+    margin: 0 auto;
+    width: 203px;
+}
+.aksis_desctiption {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+.aksis_desctiption p {
+    padding: 30px 60px;
+    font-size: 30px;
+    text-align: justify;
+    font-family: 'iranans_medium';
+    color: #2f343a;
+}
+.aksis_details {
+    width: 50%;
+    float: right;
+    position: relative;
+}
+.nemad_section {
+    width: 100%;
+    float: right;
+    background-color: #fff;
+    padding-top: 60px;
+}
+.nemad_section .nemad {
+    display: flex;
+    justify-content: center;
+}
+.nemad_section .nemad_custom {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nemad_custom img {
+    max-width: 100%;
+}
+.nemad_custom span {
+    font-size: 26px;
+    color: #211d4e;
+    font-family: 'iranans_medium';
+    margin-top: 25px;
+}
+.Contact_Us_For_more_Info {
+    width: 100%;
+    float: right;
+    position: relative;
+    background-image: url('../img/contactUs.png');
+    background-size: cover;
+    padding: 96px 0;
+    margin-top: 50px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Contact_Us_For_more_Info h1 {
+    font-size: 53px;
+    color: #fff;
+    margin: 0;
+}
+.confidence {
+    width: 100%;
+    float: right;
+    position: relative;
+    background-image: url('../img/confidence.png');
+    background-position: center;
+    padding-bottom: 40px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 81px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confidence img {
+    width: 131px;
+}
+.confidence h4 {
+    font-size: 34px;
+    color: #262457;
+    font-family: 'iranans_medium';
+    margin-right: 15px;
+}
+.footer_Custom {
+    width: 100%;
+    float: right;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #262457;
+    padding-right: 132px;
+    padding-left: 132px;
+    margin-top: -19px;
+    z-index: -1;
+}
+.footer_Custom ul {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+    float: right;
+    list-style: none;
+}
+.footer_Custom ul li {
+    display: block;
+    margin-bottom: 16px;
+}
+.footer_Custom ul li a {
+    display: block;
+    color: #fff;
+    font-size: 21px;
+    font-family: 'iranans_medium';
+}
+.location_custom {
+    position: relative;
+}
+.article ul {
+    text-align: right;
+}
+.work_time {
+    float: right;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.work_time>span {
+    font-size: 21px;
+    color: #fff;
+    font-family: 'iranans_medium';
+    margin-top: 16px;
+}
+.work_time span {
+    display: flex;
+    align-items: center;
+}
+.article {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+.location_custom {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    float: right;
+    margin-left: 15px;
+}
+.location_custom::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/sprint.png');
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-position-x: -247px;
+    background-position-y: -11px;
+    left: 0;
+}
+.phone_footer_custom {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    display: block;
+    float: right;
+}
+.phone_footer_custom::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/sprint.png);
+    background-position-x: -86px;
+    background-position-y: -10px;
+    left: 0;
+}
+.end_custom {
+    font-size: 30px;
+}
+.web_custom {
+    display: block;
+    position: relative;
+    float: right;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+}
+.web_custom::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/sprint.png');
+    background-position-x: -169px;
+    background-position-y: -11px;
+    left: 0;
+}
+.contacUs {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+.nemad_section_footer {
+    width: 100%;
+    float: right;
+    position: relative;
+    border: 5px solid #fff;
+    padding: 10px 10px;
+    border-radius: 50px;
+    text-align: right;
+    font-size: 22px;
+    font-family: 'iranans_medium';
+    color: white;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    white-space: nowrap;
+    text-align: center;
+    text-indent: 0!important;
+}
+.nemad_section_footer img {
+    max-width: 94px;
+}
+
+/* .nemad_section_footer::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/sprint.png');
+    width: 94px;
+    height: 80px;
+    background-position-x: 165px;
+    background-position-y: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+} */
+.social_media_section {
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 52px;
+}
+.social_media_section span {
+    font-size: 44px;
+}
+.social_media_section ul {
+    display: flex;
+    justify-content: space-between;
+}
+.aparat {
+    position: relative;
+    width: 43px;
+    height: 43px;
+    float: right;
+    margin-top: -13px;
+}
+.aparat img {
+    width: 45px;
+    height: 45px;
+}
+.footer_last_section {
+    width: 100%;
+    float: right;
+    position: relative;
+    background-color: #171433;
+    padding-right: 146px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 142px;
+}
+.footer_last_section p.owner {
+    color: #585166;
+    margin: 0;
+    float: right;
+    font-size: 18px;
+}
+.English_owner {
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+.English_owner img {
+    width: 30px;
+    float: left;
+}
+.English_owner p {
+    color: #585166;
+    font-size: 18px;
+    display: inline-block;
+    float: left;
+}
+.fa.fa-bars.bar_custom {
+    color: #d4b133;
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa.fa-bars.bar_custom_2 {
+    font-size: 36px;
+    color: #231f53;
+    cursor: pointer;
+}
+.layout_custom {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #00000036;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    top: -100%;
+    right: 100%;
+    cursor: pointer;
+    display: none;
+}
+.second_menu_section {
+    width: 100%;
+    float: right;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 22px;
+    display: none;
+}
+.mobile_menu_1 {
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    z-index: 999999999999999999999999999999;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    text-indent: 20px;
+    right: -100%;
+}
+.mobile_menu_1 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: auto;
+}
+.mobile_menu_1 ul li {
+    display: block;
+    border-top: 1px solid #d1ae2b26;
+    position: relative;
+}
+.mobile_menu_1 ul li a {
+    display: block;
+    color: #4b4949;
+    font-size: 14px;
+    font-family: 'iranans';
+    position: relative;
+    padding: 15px 0;
+    transition: all 0.3s;
+}
+.mobile_menu_1 img {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: block;
+}
+.mobile_menu_1 ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    margin-top: 12px;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.mobile_menu_1 ul li:hover ul {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.mobile_menu_1 ul li .fa-chevron-down {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d1ae2b;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+.mobile_menu_1 ul li ul.activeCustom {
+    visibility: visible;
+    opacity: 1;
+}
+.mobile_menu_1 ul li ul {
+    background-color: rgba(0, 0, 0, .04)!important;
+}
+.mobile_menu_1 ul li ul li {
+    border: none;
+}
+.mobile_menu_1 ul li:hover .fa-chevron-down {
+    transform: translateY(-50%) translateX(-18px) rotate(180deg);
+}
+.mobile_menu_2 {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    float: right;
+    left: 0;
+    background-color: #fff;
+    top: 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    left: -100%;
+    z-index: 9999999999999999999999999999999999999999999;
+}
+.second_menu_section_2 ul {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    float: right;
+    list-style: none;
+    text-indent: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+.second_menu_section_2 ul li {
+    display: block;
+    border-bottom: 1px solid #d1ae2b26;
+}
+.second_menu_section_2 ul li:last-child {
+    border: none;
+}
+.second_menu_section_2 ul li a {
+    padding: 15px 0;
+    display: block;
+    color: #4b4949;
+    font-size: 14px;
+    font-family: 'iranans';
+}
+.layout2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: -100%;
+    top: -100%;
+    z-index: 1;
+    background: #00000036;
+    cursor: pointer;
+    display: none;
+}
+.fa.fa-bars.bar_custom_2 {
+    font-size: 36px;
+    color: #231f53;
+    cursor: pointer;
+}
+.mobile_phone_number {
+    width: 100%!important;
+    justify-content: center;
+}
+.article_product {
+    width: 100%;
+    float: right;
+    position: relative;
+    background-color: #fff;
+    box-shadow: -2px 0px 11px 14px rgba(0, 0, 0, .1);
+    margin-top: 132px;
+    border-radius: 36px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.article_product_image {
+    width: 100%;
+    float: right;
+    border-left: 18px solid #d1b138;
+    height: 100%;
+}
+.article_product_image img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+.article_product_discription {
+    width: 100%;
+    float: right;
+    position: relative;
+    padding-top: 76px;
+    padding-right: 30px;
+    padding-bottom: 118px;
+    padding-left: 90px;
+}
+.article_product_discription h4 {
+    float: right;
+    font-size: 32px;
+    color: #c39a30;
+    font-family: 'iranans_medium';
+}
+.article_product_discription p {
+    display: block;
+    width: 100%;
+    float: right;
+    font-size: 20px;
+    color: #6e6e70;
+    line-height: 35px;
+    margin-top: 35px;
+    font-family: 'iranans_medium';
+    text-align: justify;
+}
+.carousel-cell {
+    width: 17.8%;
+    height: auto;
+    float: right;
+    margin-left: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #cdcdcd;
+    transition: all 0.3s;
+    filter: grayscale(1);
+}
+.carousel-cell:hover {
+    border-color: #d8a432;
+    filter: none;
+    cursor: pointer;
+}
+.related_product {
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 135px;
+    background-color: #e6e6e6;
+    border-radius: 36px;
+    padding-top: 16px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+.related_product_section {
+    width: 100%;
+    float: right;
+    position: relative;
+    margin-top: 22px;
+}
+.title_related_product {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+.title_related_product h4 {
+    font-size: 26px;
+    color: #8c8c8c;
+    position: relative;
+    font-family: 'iranans_medium';
+    margin-bottom: 0px;
+}
+.title_related_product::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(180, 180, 180) 100%, rgb(0, 212, 255) 100%);
+    left: 3%;
+    bottom: 9px;
+    height: 6px;
+    border-radius: 50px;
+}
+.title_related_product::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(180, 180, 180) 100%, rgb(0, 212, 255) 100%);
+    transform: rotate(180deg);
+    right: 3%;
+    bottom: 9px;
+    height: 6px;
+    border-radius: 50px;
+}
+.related_product_image {
+    width: 100%;
+    float: right;
+    position: relative;
+}
+.related_product_image img {
+    width: 100%;
+    max-width: 100%;
+}
+.flickity-button.flickity-prev-next-button.next {
+    background: #d1b138;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    outline: none!important;
+    right: -80px!important;
+}
+.flickity-button.flickity-prev-next-button.previous {
+    background: #d1b138;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    outline: none!important;
+    left: -80px!important;
+}
+.flickity-page-dots {
+    display: none;
+}
+.related_section {
+    width: 100%;
+    float: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
