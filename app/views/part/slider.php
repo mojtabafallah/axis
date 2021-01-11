@@ -5,7 +5,6 @@ $link_picture_1 = ot_get_option('link_picture_1', false);
 $text_picture_1 = ot_get_option('text_picture_1', false);
 
 $picture_2 = ot_get_option('picture_2', false);
-var_dump($picture_2);
 $link_picture_2 = ot_get_option('link_picture_2', false);
 $text_picture_2 = ot_get_option('text_picture_2', false);
 
