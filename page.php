@@ -20,29 +20,30 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
             $cate = get_queried_object();
             $cateID = $cate->term_id;
             $args = array(
-                'post_type'             => 'product',
-                'post_status'           => 'publish',
-                'orderby'   => 'meta_value_num',
-                'meta_key'  => 'total_sales',
-                'order'   => 'ASC',
-                'ignore_sticky_posts'   => 1,
-                'posts_per_page'        => '12',
-                'tax_query'             => array(
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'meta_value_num',
+                'meta_key' => 'total_sales',
+                'order' => 'ASC',
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
                     array(
-                        'taxonomy'      => 'product_cat',
+                        'taxonomy' => 'product_cat',
                         'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-                        'terms'         => $cateID,
-                        'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
                     ),
                     array(
-                        'taxonomy'      => 'product_visibility',
-                        'field'         => 'slug',
-                        'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
-                        'operator'      => 'NOT IN'
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
                     )
                 )
             );
             $products = new WP_Query($args);
+            wp_reset_query();
             break;
         }
         case "view" :
@@ -50,29 +51,30 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
             $cate = get_queried_object();
             $cateID = $cate->term_id;
             $args = array(
-                'post_type'             => 'product',
-                'post_status'           => 'publish',
-                'orderby'   => 'meta_value_num',
-                'meta_key'  => 'post_views_count',
-                
-                'ignore_sticky_posts'   => 1,
-                'posts_per_page'        => '12',
-                'tax_query'             => array(
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'meta_value_num',
+                'meta_key' => 'post_views_count',
+
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
                     array(
-                        'taxonomy'      => 'product_cat',
+                        'taxonomy' => 'product_cat',
                         'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-                        'terms'         => $cateID,
-                        'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
                     ),
                     array(
-                        'taxonomy'      => 'product_visibility',
-                        'field'         => 'slug',
-                        'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
-                        'operator'      => 'NOT IN'
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
                     )
                 )
             );
             $products = new WP_Query($args);
+            wp_reset_query();
             break;
         }
         case "cheap" :
@@ -80,30 +82,30 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
             $cate = get_queried_object();
             $cateID = $cate->term_id;
             $args = array(
-                'post_type'             => 'product',
-                'post_status'           => 'publish',
-                'orderby'   => 'meta_value_num',
-                'meta_key'  => '_price',
-                'order'   => 'ASC',
-                'ignore_sticky_posts'   => 1,
-                'posts_per_page'        => '12',
-                'tax_query'             => array(
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'meta_value_num',
+                'meta_key' => '_price',
+                'order' => 'ASC',
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
                     array(
-                        'taxonomy'      => 'product_cat',
+                        'taxonomy' => 'product_cat',
                         'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-                        'terms'         => $cateID,
-                        'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
                     ),
                     array(
-                        'taxonomy'      => 'product_visibility',
-                        'field'         => 'slug',
-                        'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
-                        'operator'      => 'NOT IN'
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
                     )
                 )
             );
             $products = new WP_Query($args);
-
+            wp_reset_query();
             break;
         }
         case "expensive" :
@@ -111,41 +113,88 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
             $cate = get_queried_object();
             $cateID = $cate->term_id;
             $args = array(
-                'post_type'             => 'product',
-                'post_status'           => 'publish',
-                'orderby'   => 'meta_value_num',
-                'meta_key'  => '_price',
-                'ignore_sticky_posts'   => 1,
-                'posts_per_page'        => '12',
-                'tax_query'             => array(
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'meta_value_num',
+                'meta_key' => '_price',
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
                     array(
-                        'taxonomy'      => 'product_cat',
+                        'taxonomy' => 'product_cat',
                         'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-                        'terms'         => $cateID,
-                        'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
                     ),
                     array(
-                        'taxonomy'      => 'product_visibility',
-                        'field'         => 'slug',
-                        'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
-                        'operator'      => 'NOT IN'
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
                     )
                 )
             );
             $products = new WP_Query($args);
-
+            wp_reset_query();
             break;
         }
         case "news" :
         {
+            $cate = get_queried_object();
+            $cateID = $cate->term_id;
             $args = array(
                 'post_type' => 'product',
+                'post_status' => 'publish',
                 'orderby' => 'date',
 
-                'posts_per_page' => 12,
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field' => 'term_id', //This is optional, as it defaults to 'term_id'
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                    ),
+                    array(
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
+                    )
+                )
             );
             $products = new WP_Query($args);
+            wp_reset_query();
+            break;
+        }
+        default :
+        {
+            $cate = get_queried_object();
+            $cateID = $cate->term_id;
+            $args = array(
+                'post_type' => 'product',
+                'post_status' => 'publish',
+                'orderby' => 'date',
 
+                'ignore_sticky_posts' => 1,
+                'posts_per_page' => '12',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'product_cat',
+                        'field' => 'term_id', //This is optional, as it defaults to 'term_id'
+                        'terms' => $cateID,
+                        'operator' => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+                    ),
+                    array(
+                        'taxonomy' => 'product_visibility',
+                        'field' => 'slug',
+                        'terms' => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+                        'operator' => 'NOT IN'
+                    )
+                )
+            );
+            $products = new WP_Query($args);
             wp_reset_query();
             break;
         }
@@ -173,7 +222,7 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
                     <div class="carousel" data-flickity='{ "groupCells": true }'>
 
                         <?php
-                        $data =[];
+                        $data = [];
                         while ($products->have_posts()):
                             $products->the_post();
                             global $product;
@@ -181,15 +230,15 @@ if (isset($_POST['btn_expensive'])) $type_sort = "expensive";
                             $data[] = $product->get_data();
                             # get a list of sort columns and their data to pass to array_multisort
                             $sort = array();
-                            foreach($data as $k=>$v) {
+                            foreach ($data as $k => $v) {
                                 $sort['title'][$k] = $v['title'];
                                 $sort['price'][$k] = $v['price'];
                             }
                             # sort by event_type desc and then title asc
-                            array_multisort($sort['price'], SORT_DESC, $sort['title'], SORT_ASC,$data);
+                            array_multisort($sort['price'], SORT_DESC, $sort['title'], SORT_ASC, $data);
 
 
-                       ?>
+                            ?>
 
                             <a href="<?php echo
                             get_permalink() ?>">
